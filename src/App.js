@@ -1,5 +1,4 @@
 import './App.css';
-//import { useSate, useEffect } from "react";
 import { useEffect, useState } from 'react';
 import Search from './components/filter/search';
 import FilterBar from './components/filter/filterBar';

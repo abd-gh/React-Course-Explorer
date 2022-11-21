@@ -1,0 +1,32 @@
+
+.last-review{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    
+  }
+  .star{
+    font-size: xx-large;
+    text-align: left;
+  }
+  .on {
+    color: #effb42;
+  }
+  .off {
+    color: #ccc;
+    lighting-color: rgb(0, 0, 0);
+    
+  }
+
+  .course-evaluate{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+  }

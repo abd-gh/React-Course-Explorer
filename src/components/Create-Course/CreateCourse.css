@@ -1,0 +1,50 @@
+.Create-Course {
+    margin: 2% 12%;
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 0.5fr 2fr;
+    grid-template-rows: 2fr 2fr 2fr 5fr 2fr;
+    gap: 1rem;
+
+    
+}
+
+.label {
+    place-self: center;
+}
+
+.text-box {
+    height: 2rem;
+}
+
+.button-addCourse{
+    font: inherit;
+    cursor: pointer;
+    padding: 1px 6px;
+    border: 1px solid #f07d00;
+    background-color: #f07d00;
+    color: white;
+    border-radius: 50%;
+    margin-left: 87%;
+}
+
+.button-action  {
+    font: inherit;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    border: 1px solid #f07d00;
+    background-color: #f07d00;
+    color: white;
+    border-radius: 12px;
+    margin-left: 1rem;
+}
+
+.button-action:hover,
+.button-action:active {
+    background-color: #ff921e;
+    border-color: #ff921e;
+}
+
+.buttons{
+    grid-column: 4 / 5;
+    place-self: end;
+}

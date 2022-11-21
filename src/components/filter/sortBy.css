@@ -1,0 +1,11 @@
+.sort-by__select{
+    display: flex;
+    /* flex-direction: row; */
+    gap: 1rem;
+    /* align-content: flex-end; */
+    /* flex-wrap: wrap; */
+    align-items: center;
+    margin: 0.5rem;
+    width: 15rem;
+    border: 1px solid #b7b7b7;
+}

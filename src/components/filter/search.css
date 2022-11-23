@@ -6,10 +6,11 @@
     /* flex-wrap: wrap; */
     align-items: center;
     margin: 0.5rem;
+    width: 70%;
 }
 
 .search-input{
-    width: 22rem;
+    width: 80%;
     border: 1px solid #b7b7b7;
    
 }

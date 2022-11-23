@@ -103,28 +103,28 @@ const CreateCourse = (props) => {
         <form className="Create-Course" onSubmit={submitHandler}>
 
             <label className="label">Name</label>
-            <input onChange={nameHandler} type="text" placeholder="Name of Course"></input>
+            <input className="Create-Course__Input" onChange={nameHandler} type="text" placeholder="Name of Course"></input>
 
             <label className="label">instructor </label>
-            <input onChange={instructorHandler} type="text" placeholder="Instructor"></input>
+            <input className="Create-Course__Input" onChange={instructorHandler} type="text" placeholder="Instructor"></input>
 
             <label className="label">length</label>
-            <input onChange={lengthHandler} type="number" placeholder="Length in Month"></input>
+            <input className="Create-Course__Input" onChange={lengthHandler} type="number" placeholder="Length in Month"></input>
 
             <label className="label">Link</label>
-            <input onChange={linkHandler} type="text" placeholder="link"></input>
+            <input className="Create-Course__Input" onChange={linkHandler} type="text" placeholder="link"></input>
 
             <label className="label">Supplier</label>
-            <input onChange={SupplierHandler} type="text" placeholder="Supplier"></input>
+            <input className="Create-Course__Input" onChange={SupplierHandler} type="text" placeholder="Supplier"></input>
 
             <label className="label">Skills required</label>
-            <input onChange={requiredHandler} type="text" placeholder="Skills required"></input>
+            <input className="Create-Course__Input" onChange={requiredHandler} type="text" placeholder="Skills required"></input>
 
-            <label className="label">Skills learned</label>
-            <input onChange={learnedHandler} type="text" placeholder="Skills learned"></input>
+            <label className="label-textarea">Skills learned</label>
+            <textarea className="Create-Course__Input" onChange={learnedHandler} type="text" placeholder="Skills learned" />
 
-            <label className="label">Description</label>
-            <input onChange={DescriptionHandler} className="description" type="text" placeholder="Description"></input>
+            <label className="label-textarea">Description</label>
+            <textarea  className="Create-Course__Input" onChange={DescriptionHandler}  type="text" placeholder="Description" />
 
             <div className="buttons">
                 <button  className="button-action" type="submit">Add Course</button>

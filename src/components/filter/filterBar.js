@@ -3,6 +3,7 @@ import Search from "./search";
 import './filterBar.css';
 import SortBy from "./sortBy";
 import Courses from "../list/courses";
+import CreateCourse from "../Create-Course/CreateCourse.js";
 
 const FilterBar = (props) => {
     //console.log(props.reload);
@@ -11,6 +12,7 @@ const FilterBar = (props) => {
 
     const [searchedValue, setSearchedValue] = useState('');
     const [sortedValue, setSortedValue] = useState('');
+    const [createCourse, setCreatedCourse] = useState('');
     const[usname,setUsname]=useState(props.uname);
  
     const seachedChangeHandler = (x) => {    
@@ -21,10 +23,15 @@ const FilterBar = (props) => {
         setSortedValue(y);
       //  console.log(y);
     };
+    const CreatedCourseHandler = (z) => {    
+        setCreatedCourse(z);
+        console.log(z);
+    };
 
    
     return (
         <>
+        <CreateCourse currentuser={usname} onAddCourse={CreatedCourseHandler} />
         <div className='filter-bar'>
             <h1 className='filter-bar__right'>
                 Courses 
@@ -35,7 +42,7 @@ const FilterBar = (props) => {
                 
             </div>
         </div>
-        <Courses SortBy={sortedValue} LookFor={searchedValue} currentu={usname} />
+        <Courses SortBy={sortedValue} LookFor={searchedValue} currentu={usname} Refresh={createCourse}/>
         </>
     )
 };

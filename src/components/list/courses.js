@@ -31,13 +31,16 @@ const Courses = (props) => {
             );
         };
         getCourses()
-    }, [haveReload, rateChange]);
+    }, [props.Refresh, rateChange]);
 
     let SortedCourse = [...ourCourses].sort((a, b) => a.Name > b.Name ? 1 : -1,);
     if (props.SortBy == "Course supplier") {
         SortedCourse = [...ourCourses].sort((a, b) => a.supplier > b.supplier ? 1 : -1,);
     }
-    else if (props.SortBy == "Course length") {
+    else if (props.SortBy == "Descending Course length") {
+        SortedCourse = [...ourCourses].sort((a, b) => a.Course_length > b.Course_length ? -1 : 1,);
+    }
+    else if (props.SortBy == "Ascending Course length") {
         SortedCourse = [...ourCourses].sort((a, b) => a.Course_length > b.Course_length ? 1 : -1,);
     }
     else if (props.SortBy == "Name of course") {
@@ -63,31 +66,8 @@ const Courses = (props) => {
         setHaveReload(answer);
     }
 
-    const update = async (id, rate, points, count) => {
-        const courseDoc = doc(db, "Courses", id)
-        const newFields = {
-            Points: points + rate,
-            count: count + 1,
-            Rate_Avg: (points + rate) / (count + 1),
-            Last_Review_date: new Date(),
-            Last_Review_Name: props.currentu
-        }
-        await updateDoc(courseDoc, newFields)
-        setRateChange(!rateChange);
-    }
 
-    const addRating = async (index, id, points, count) => {
 
-        console.log(props.currentu);
-        await addDoc(CourseEvaluationCollectionRef, {
-            Course_Id: id,
-            Username: props.currentu,
-            date: new Date,
-            rate: index
-        });
-        setRating(index);
-        update(id, index, points, count);
-    }
     const rateChanged = (c) => {
         setRateChange(c);
         //console.log('course '+c);
@@ -95,7 +75,7 @@ const Courses = (props) => {
 
     return (
         <>
-            <CreateCourse currentuser={props.currentu} onAddCourse={reload} />
+            
             {SearchCourse.map((course) => {
                 return (
                     <>
@@ -103,7 +83,7 @@ const Courses = (props) => {
                             <h2>{course.Name}</h2>
                             <div className="course-body">
                                 <div className="course-information">
-                                    <p className="course-sourse">{course.supplier}</p>
+                                    <p className="course-sourse">{course.Instructor}, {course.supplier}</p>
                                     <p className="course-description">{course.Description}</p>
                                     <p>Length: {course.Course_length}   Month </p>
                                     <p className="course-skills">Skills: {course.Skills_Learned}   </p>

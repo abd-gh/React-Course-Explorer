@@ -1,5 +1,5 @@
 .Create-Course {
-    margin: 2% 12%;
+    margin: 2% 3%;
     display: grid;
     grid-template-columns: 0.5fr 2fr 0.5fr 2fr;
     grid-template-rows: 2fr 2fr 2fr 5fr 2fr;
@@ -7,14 +7,17 @@
 
     
 }
-
 .label {
     place-self: center;
 }
 
-.text-box {
-    height: 2rem;
+.label-textarea {
+    place-self: center;
+    align-self: start;
+    padding-top: 1%;
 }
+
+
 
 .button-addCourse{
     font: inherit;
@@ -24,7 +27,7 @@
     background-color: #f07d00;
     color: white;
     border-radius: 50%;
-    margin-left: 87%;
+    margin-left: 96%;
 }
 
 .button-action  {
@@ -47,4 +50,9 @@
 .buttons{
     grid-column: 4 / 5;
     place-self: end;
+}
+
+.Create-Course__Input{
+    padding-left: 2%;
+    padding-top: 1%;
 }

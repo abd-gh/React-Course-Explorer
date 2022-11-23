@@ -10,7 +10,8 @@ return(
 <select onChange={sortSelectHandler} className="sort-by__select">
     <option> Name of course</option>
     <option>Course supplier</option>
-    <option>Course length</option>
+    <option>Descending Course length</option>
+    <option>Ascending Course length</option>
     <option>Review date</option>
     <option>Nr of stars</option>
 
